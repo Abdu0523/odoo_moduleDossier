@@ -1,0 +1,10 @@
+<odoo>
+    <menuitem id="menu_somasic_root" name="SOMASIC" sequence="10"/>
+    <menuitem id="menu_dossier_main" name="Dossiers" parent="menu_somasic_root"/>
+
+    <act_window id="action_somasic_dossier"
+                name="Dossiers"
+                res_model="somasic.dossier"
+                view_mode="tree,form"
+                menu_id="menu_dossier_main"/>
+</odoo>
