@@ -1,9 +1,9 @@
 <odoo>
     <data>
-        <record model="ir.ui.view" id="view_dossier_tree" >
+        <record model="ir.ui.view" id="view_dossier_tree">
             <field name="name">somasic.dossier.tree</field>
             <field name="model">somasic.dossier</field>
-            <field name="arch">
+            <field name="arch" type="xml">
                 <tree string="Dossier">
                     <field name="name"/>
                     <field name="partner_id"/>
@@ -11,10 +11,11 @@
                 </tree>
             </field>
         </record>
+
         <record model="ir.ui.view" id="view_dossier_form">
             <field name="name">somasic.dossier.form</field>
             <field name="model">somasic.dossier</field>
-            <field name="arch">
+            <field name="arch" type="xml">
                 <form string="Dossier">
                     <sheet>
                         <group>
