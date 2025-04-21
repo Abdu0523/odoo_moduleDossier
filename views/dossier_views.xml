@@ -34,6 +34,15 @@
                             <page string="Devis" />
                             <page string="Facture" />
                         </notebook>
+                        <footer>
+                            <!-- Bouton de changement d'état -->
+                            <button name="action_validate" type="object" string="Valider" class="btn-primary" 
+                                    attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                            <button name="action_close" type="object" string="Clôturer" class="btn-secondary" 
+                                    attrs="{'invisible': [('state', '!=', 'validated')]}"/>
+                            <button name="action_draft" type="object" string="Revenir à Brouillon" class="btn-default" 
+                                    attrs="{'invisible': [('state', '!=', 'validated')]}" />
+                        </footer>
                     </sheet>
                 </form>
             </field>
