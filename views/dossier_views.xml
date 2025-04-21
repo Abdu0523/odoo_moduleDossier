@@ -2,15 +2,15 @@
 <odoo>
     <data noupdate="1">
         <!-- vue tree -->
-        <record model="ir.ui.view" id="view_dossier_tree">
-            <field name="name">somasic.dossier.tree</field>
+        <record model="ir.ui.view" id="view_dossier_list">
+            <field name="name">somasic.dossier.list</field>
             <field name="model">somasic.dossier</field>
             <field name="arch">
-                <tree string="Dossier">
+                <list string="Dossier">
                     <field name="name" />
                     <field name="partner_id" />
                     <field name="state" />
-                </tree>
+                </list>
             </field>
         </record>
         <!--  vue form -->
@@ -38,17 +38,48 @@
                 </form>
             </field>
         </record>
+        <!-- VUE DE RECHERCHE -->
+        <record id="view_dossier_search" model="ir.ui.view">
+            <field name="name">somasic.dossier.search</field>
+            <field name="model">somasic.dossier</field>
+            <field name="arch" type="xml">
+                <search string="Recherche Dossiers">
+                    <!-- Recherches simples -->
+                    <field name="name" string="Nom du dossier" />
+                    <field name="partner_id" string="Client" />
+                    <field name="interlocuteur_id" string="Interlocuteur" />
+                    <field name="date_ouverture" string="Date d'ouverture" />
+
+                    <!-- Filtres prédéfinis -->
+                    <filter name="filter_draft" string="Brouillon"
+                        domain="[('state', '=', 'draft')]" />
+                    <filter name="filter_validated" string="Validé"
+                        domain="[('state', '=', 'validated')]" />
+                    <filter name="filter_closed" string="Clôturé"
+                        domain="[('state', '=', 'closed')]" />
+
+                    <!-- Grouper par -->
+                    <group expand="1" string="Groupes">
+                        <filter name="group_by_client" string="Par client"
+                            context="{'group_by': 'partner_id'}" />
+                        <filter name="group_by_interlocuteur" string="Par interlocuteur"
+                            context="{'group_by': 'interlocuteur_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
         <!-- Action associée aux vues -->
         <record id="action_dossier" model="ir.actions.act_window">
             <field name="name">Dossiers</field>
             <field name="res_model">somasic.dossier</field>
-            <field name="view_mode">tree,form</field>
-            <field name="view_id" ref="view_dossier_tree"/>
+            <field name="view_mode">list,form</field>
+            <field name="view_id" ref="view_dossier_list" />
         </record>
         <!-- Menu parent -->
         <menuitem id="menu_somasic_root" name="Somasic" />
         <!-- Sous-menu avec l'action associée -->
         <menuitem id="menu_dossier" name="Dossiers" parent="menu_somasic_root"
-                  action="action_dossier" />
+            action="action_dossier" />
     </data>
 </odoo>
