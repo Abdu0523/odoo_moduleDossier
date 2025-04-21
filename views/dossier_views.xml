@@ -1,40 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data>
+    <data noupdate="1">
+        <!-- vue tree -->
         <record model="ir.ui.view" id="view_dossier_tree">
             <field name="name">somasic.dossier.tree</field>
             <field name="model">somasic.dossier</field>
-            <field name="arch" type="xml">
+            <field name="arch">
                 <tree string="Dossier">
-                    <field name="name"/>
-                    <field name="partner_id"/>
-                    <field name="state"/>
+                    <field name="name" />
+                    <field name="partner_id" />
+                    <field name="state" />
                 </tree>
             </field>
         </record>
-
+        <!--  vue form -->
         <record model="ir.ui.view" id="view_dossier_form">
             <field name="name">somasic.dossier.form</field>
             <field name="model">somasic.dossier</field>
-            <field name="arch" type="xml">
+            <field name="arch">
                 <form string="Dossier">
                     <sheet>
                         <group>
-                            <field name="name"/>
-                            <field name="partner_id"/>
-                            <field name="interlocuteur_id"/>
-                            <field name="date_ouverture"/>
-                            <field name="disciplines"/>
-                            <field name="state" widget="statusbar"/>
-                            <field name="attachment_ids" widget="many2many_binary"/>
+                            <field name="name" />
+                            <field name="partner_id" />
+                            <field name="interlocuteur_id" />
+                            <field name="date_ouverture" />
+                            <field name="disciplines" />
+                            <field name="state" widget="statusbar" />
+                            <field name="attachment_ids" widget="many2many_binary" />
                         </group>
+                        <notebook>
+                            <page string="Proposition commerciale" />
+                            <page string="Devis" />
+                            <page string="Facture" />
+                        </notebook>
                     </sheet>
-                    <notebook>
-                        <page string="Proposition commerciale"/>
-                        <page string="Devis"/>
-                        <page string="Facture"/>
-                    </notebook>
                 </form>
             </field>
         </record>
+        <!-- Action associée aux vues -->
+        <record id="action_dossier" model="ir.actions.act_window">
+            <field name="name">Dossiers</field>
+            <field name="res_model">somasic.dossier</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_dossier_tree"/>
+        </record>
+        <!-- Menu parent -->
+        <menuitem id="menu_somasic_root" name="Somasic" />
+        <!-- Sous-menu avec l'action associée -->
+        <menuitem id="menu_dossier" name="Dossiers" parent="menu_somasic_root"
+                  action="action_dossier" />
     </data>
 </odoo>
