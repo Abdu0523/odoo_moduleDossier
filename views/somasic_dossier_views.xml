@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- View somasic.dossier View List -->
+    <!-- View somasic.dossier List -->
     <record id="view_somasic_dossier_list" model="ir.ui.view">
         <field name="name">view.somasic.dossier.list</field>
         <field name="model">somasic.dossier</field>
         <field name="arch" type="xml">
-            <list>
-                <field name="name"/>
+            <list string="Liste des Dossiers">
+                <field name="num_dossier" />
+                <field name="partner_id" />
+                <field name="interlocuteur_id" />
+                <field name="designation" />
+                <field name="date_ouverture" />
+                <field name="disciplines" />
+                <field name="state" />
             </list>
         </field>
     </record>
 
-    <!-- View somasic.dossier form -->
+    <!-- View somasic.dossier Form -->
     <record id="view_somasic_dossier_form" model="ir.ui.view">
         <field name="name">view.somasic.dossier.form</field>
         <field name="model">somasic.dossier</field>
         <field name="arch" type="xml">
-            <form string="Somasic Dossier">
+            <form string="Dossier">
                 <sheet>
                     <div class="oe_title">
-                        <label for="name"/>
                         <h1>
-                            <field name="name" placeholder="Name..."/>
+                            NOUVEAU DOSSIER
                         </h1>
                     </div>
+                    <group>
+                        <field name="partner_id" required="1" />
+                        <field name="interlocuteur_id" domain="[('parent_id','=',partner_id)]"
+                            context="{'default_parent_id': partner_id}" />
+                        <field name="designation" required="1" />
+                        <field name="date_ouverture" />
+                        <field name="disciplines" />
+                        
+                    </group>
                 </sheet>
             </form>
         </field>
     </record>
+
 
     <!-- View somasic.dossier search -->
     <record id="view_somasic_dossier_search" model="ir.ui.view">
@@ -37,7 +52,10 @@
         <field name="arch" type="xml">
             <search>
                 <group expand="1" string="Group By">
-                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                    <filter string="Par État" name="filter_state" domain="[]"
+                        context="{'group_by':'state'}" />
+                    <filter string="Par Client" name="filter_partner" domain="[]"
+                        context="{'group_by':'partner_id'}" />
                 </group>
             </search>
         </field>
@@ -53,7 +71,7 @@
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
-                There is no examples click here to add new Somasic Dossier.
+                Il n'y a pas d'exemples cliquez ici pour ajouter un nouveau dossier.
             </p>
         </field>
     </record>
