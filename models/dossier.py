@@ -15,7 +15,7 @@ class Dossier(models.Model):
         ('in_progress', 'En cours'),
         ('validated', 'Validé'),
         ('done', 'Clôturé'),
-    ], string="État", default='draft', tracking='onchange')
+    ], string="État", default='draft', tracking=True)
     # Méthode pour valider le dossier (changer l'état à "validé")
     def action_validate(self):
         self.write({'state': 'validated'})
