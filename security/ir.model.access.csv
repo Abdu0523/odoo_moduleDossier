@@ -1,2 +1,2 @@
-id,name,model_id:id,group_id,perm_read,perm_write,perm_create,perm_unlink
-access_somasic_dossier,somasic.dossier,model_somasic_dossier,,1,1,1,1
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_somasic_dossier_manager,somasic_dossier_manager,model_somasic_dossier,,1,1,1,1
