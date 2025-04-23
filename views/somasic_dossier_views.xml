@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- View somasic.dossier List -->
+    <!-- View List -->
     <record id="view_somasic_dossier_list" model="ir.ui.view">
         <field name="name">view.somasic.dossier.list</field>
         <field name="model">somasic.dossier</field>
@@ -11,14 +11,14 @@
                 <field name="partner_id" />
                 <field name="interlocuteur_id" />
                 <field name="designation" />
-                <field name="date_ouverture" />
                 <field name="disciplines" />
+                <field name="date_ouverture" />
                 <field name="state" />
             </list>
         </field>
     </record>
 
-    <!-- View somasic.dossier Form -->
+    <!-- View  Formulaire -->
     <record id="view_somasic_dossier_form" model="ir.ui.view">
         <field name="name">view.somasic.dossier.form</field>
         <field name="model">somasic.dossier</field>
@@ -26,8 +26,13 @@
             <form string="Dossier">
                 <sheet>
                     <div class="oe_title">
+                        <section>
+                            <h1 style="color:indigo">
+                                Dossier Client
+                            </h1>
+                        </section>
                         <h1>
-                            NOUVEAU DOSSIER
+                            <field name="num_dossier" readonly="1" />
                         </h1>
                     </div>
                     <group>
@@ -37,7 +42,7 @@
                         <field name="designation" required="1" />
                         <field name="date_ouverture" />
                         <field name="disciplines" />
-                        
+                        <field name="state"/>
                     </group>
                 </sheet>
             </form>

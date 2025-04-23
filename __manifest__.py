@@ -8,7 +8,7 @@
     """,
     'author': 'Somasic',
     'category': 'Sales',
-    'depends': ['base', 'mail'],
+    'depends': ['base'],
     "data": [
         "security/ir.model.access.csv",
         "views/somasic_dossier_views.xml",
