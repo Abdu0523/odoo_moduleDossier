@@ -42,9 +42,82 @@
                         <field name="designation" required="1" />
                         <field name="date_ouverture" />
                         <field name="disciplines" />
-                        <field name="state"/>
+                        <field name="state" />
                     </group>
+                    <notebook>
+                        <page name="pro_com" string="Proposition commercial">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="demande_client" string="Demande de client">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="devis" string="Devis">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="prog_etalon" string="Programme d'étalonnage">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="relance" string="Relance">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="bon_commande" string="Bon de commande">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="contrat" string="Contrat">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="discution" string="Discutions">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="bon_recep" string="Bon de réception">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="ordre_mission" string="Ordre de mission">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="pv_mission" string="PV de mission">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="Bord_env" string="Bordereau d'envoi">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore disponible
+                            </p>
+                        </page>
+                        <page name="facture" string="Factures">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore  disponible
+                            </p>
+                        </page>
+                        <page name="lettre" string="Lettre/Email">
+                            <p class="o_view_nocotent_smiling_face">
+                                donnée pas encore  disponible
+                            </p>
+                        </page>
+                    </notebook>
                 </sheet>
+
             </form>
         </field>
     </record>
@@ -75,8 +148,8 @@
         <field name="domain">[]</field>
         <field name="context">{}</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">
-                Il n'y a pas d'exemples cliquez ici pour ajouter un nouveau dossier.
+            <p class="o_view_nocotent">
+                Auccun dossier disponible
             </p>
         </field>
     </record>
