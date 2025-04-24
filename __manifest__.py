@@ -12,6 +12,7 @@
     "data": [
         "security/ir.model.access.csv",
         "views/somasic_dossier_views.xml",
+        "views/somasic_dossier_menus.xml",
         "reports/somasic_dossier_report.xml"
     ],
     'installable': True,

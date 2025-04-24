@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="menu_root"
+        name="Dossier"/>
+
+    <menuitem
+        id="gestion_menu"
+        name="Gestion"
+        action="action_somasic_dossier"
+        parent="menu_root"
+        sequence="10" />
+
+    <menuitem
+        id="suivi_menu"
+        name="Suivi"
+        parent="menu_root"
+        action="action_somasic_dossier"
+        sequence="11" />
+
+    <menuitem
+        id="analyse_menu"
+        name="Analyse"
+        parent="menu_root"
+        action="action_somasic_dossier"
+        sequence="12" />
+
+    <menuitem
+        id="planning_menu"
+        name="Planning"
+        parent="menu_root"
+        action="action_somasic_dossier"
+        sequence="13" />
+
+    <menuitem
+        id="bordereau_menu"
+        name="Bordereau"
+        parent="menu_root"
+        action="action_somasic_dossier"
+        sequence="14" />
+
+    <menuitem
+        id="config_menu"
+        name="Configuration"
+        parent="menu_root"
+        action="action_somasic_dossier"
+        sequence="15" />
+</odoo>

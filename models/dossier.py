@@ -22,7 +22,7 @@ class Dossier(models.Model):
         ('done', 'Terminé'),
         ('cancelled', 'Annulé')
     ], string='Status', default='open')
-
+ 
     
 ### Géneration automatique du numero de dossier 
     @api.model_create_multi
