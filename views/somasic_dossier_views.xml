@@ -44,88 +44,152 @@
                         <field name="disciplines" />
                         <field name="state" />
                     </group>
-                    <notebook>
-                    <!--  onglet Proposition commercial -->
+                    <separator />
+                    <notebook >
+                        <!--  onglet Proposition commercial -->
                         <page name="pro_com" string="Proposition commercial">
                             <h1>
                                 Envoi
                             </h1>
                             <group style="margin:30px">
-                                <field name="pc_email" />
-                                <field name="pc_deposed" />
-                                <field name="pc_sended" />
+                                <field name="og_email" />
+                                <field name="og_deposed" />
+                                <field name="og_sended" />
                             </group>
                             <group>
-                                <field name="pc_line_ids">
+                                <field name="onglet_ids">
                                     <list editable="bottom">
-                                        <field name="ref"/>
-                                        <field name="du_"/>
+                                        <field name="ref" />
+                                        <field name="du_" />
                                     </list>
                                 </field>
                             </group>
 
                         </page>
 
+                        <!-- onglet Demande de client -->
                         <page name="demande_client" string="Demande de client">
-                            <p class="o_view_nocotent_smiling_face">
-                                donnée pas encore disponible
-                            </p>
+                            <h1>
+                                Réception
+                            </h1>
+                            <!-- checkbox -->
+                            <group style="margin:30px">
+                                <field name="og_email" />
+                                <field name="og_deposed" />
+                                <field name="og_tel" />
+                            </group>
+
+                            <h1>
+                                Exigences client
+                            </h1>
+
+                            <group col="2" style="margin:30px">
+                                <group>
+                                    <field name="og_prest" />
+                                    <field name="og_date_inter" />
+                                    <field name="og_del_inter" />
+                                    <field name="og_price" />
+                                    <field name="og_mode_pay" />
+                                </group>
+                                <group>
+                                    <field name="og_norm_appl" />
+                                    <field name="og_niv_inc" />
+                                    <field name="og_proch_date_etalon" />
+                                    <field name="og_cap_labo" />
+                                    <field name="og_visa_client" />
+                                </group>
+
+                            </group>
+
+                            <!-- Table -->
+                            <group>
+                                <field name="onglet_ids">
+                                    <list editable="bottom">
+                                        <field name="ref" />
+                                        <field name="du_" />
+                                    </list>
+                                </field>
+                            </group>
                         </page>
+
+                        <!-- onglet Devis -->
                         <page name="devis" string="Devis">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Onglet Programme d'étalonnage -->
                         <page name="prog_etalon" string="Programme d'étalonnage">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Onglet Relance -->
                         <page name="relance" string="Relance">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Onglet Bon de commande -->
                         <page name="bon_commande" string="Bon de commande">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Onglet Contrat-->
                         <page name="contrat" string="Contrat">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Onglet Discutions-->
                         <page name="discution" string="Discutions">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Onglet Bon de reception-->
                         <page name="bon_recep" string="Bon de réception">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Onglet Ordre de mission-->
                         <page name="ordre_mission" string="Ordre de mission">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Onglet PV de mission-->
                         <page name="pv_mission" string="PV de mission">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Onglet Bordereau d'envoi-->
                         <page name="Bord_env" string="Bordereau d'envoi">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Ongle Facture-->
                         <page name="facture" string="Factures">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
                             </p>
                         </page>
+
+                        <!-- Onglet Lettre/Email -->
                         <page name="lettre" string="Lettre/Email">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible

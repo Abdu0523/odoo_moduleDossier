@@ -1,8 +1,8 @@
 from odoo import models, fields
 
-class pcline(models.Model):
-    _name = "somasic.pc_line"
-    _description = "List sur l'onglet proposition commerciale"
+class onglet(models.Model):
+    _name = "somasic.onglet"
+    _description = "Données onglets"
 
     dossier_id =fields.Many2one(
         'somasic.dossier',

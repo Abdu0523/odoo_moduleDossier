@@ -25,15 +25,26 @@ class Dossier(models.Model):
     ], string='Status', default='open')
 
 #### Proposition commerciale : lignes dynamiques
-    pc_line_ids = fields.One2many (
-       'somasic.pc_line',
+    onglet_ids = fields.One2many (
+       'somasic.onglet',
        'dossier_id',
        string = " "
     )
-#### Checkbox (onglet Proposition Commercial)
-    pc_email = fields.Boolean(string='Email')
-    pc_deposed = fields.Boolean(string = 'Déposée')
-    pc_sended = fields.Boolean(string = 'Dèja envoyée')
+#### Checkbox (onglet)
+    og_email = fields.Boolean(string='Email')
+    og_deposed = fields.Boolean(string = 'Déposée')
+    og_sended = fields.Boolean(string = 'Dèja envoyée')
+    og_tel = fields.Boolean(string = 'Téléphone')
+    og_prest = fields.Boolean(string = 'Prestation demandée')
+    og_date_inter = fields.Boolean(string = 'Date d'+"'"+'intervention')
+    og_del_inter = fields.Boolean(string = 'Délai d'+"'"+'intervention')
+    og_price = fields.Boolean(string = 'Prix')
+    og_mode_pay = fields.Boolean(string = 'Mode de payement')
+    og_norm_appl = fields.Boolean(string = 'Normes applicables')
+    og_niv_inc = fields.Boolean(string = 'Niveau d'+"'"+'incertitude')
+    og_proch_date_etalon = fields.Boolean(string = 'Prochaine date d'+"'"+'étalonnage')
+    og_cap_labo = fields.Boolean(string = 'Capabilité du laboratoire')
+    og_visa_client = fields.Boolean(string = 'Visa client')
 
     
 ### Géneration automatique du numero de dossier 
