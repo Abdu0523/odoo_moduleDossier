@@ -6,6 +6,7 @@ class Dossier(models.Model):
     _description = 'Dossier Client'
     _order = 'num_dossier desc'
 
+#### vue List et Forms
     num_dossier = fields.Char(string='N. dossier', readonly=True, copy=False)
     partner_id = fields.Many2one('res.partner', string='Client', required=True)
     interlocuteur_id = fields.Many2one(
@@ -22,7 +23,18 @@ class Dossier(models.Model):
         ('done', 'Terminé'),
         ('cancelled', 'Annulé')
     ], string='Status', default='open')
- 
+
+#### Proposition commerciale : lignes dynamiques
+    pc_line_ids = fields.One2many (
+       'somasic.pc_line',
+       'dossier_id',
+       string = " "
+    )
+#### Checkbox (onglet Proposition Commercial)
+    pc_email = fields.Boolean(string='Email')
+    pc_deposed = fields.Boolean(string = 'Déposée')
+    pc_sended = fields.Boolean(string = 'Dèja envoyée')
+
     
 ### Géneration automatique du numero de dossier 
     @api.model_create_multi

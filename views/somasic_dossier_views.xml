@@ -45,11 +45,27 @@
                         <field name="state" />
                     </group>
                     <notebook>
+                    <!--  onglet Proposition commercial -->
                         <page name="pro_com" string="Proposition commercial">
-                            <p class="o_view_nocotent_smiling_face">
-                                donnée pas encore disponible
-                            </p>
+                            <h1>
+                                Envoi
+                            </h1>
+                            <group style="margin:30px">
+                                <field name="pc_email" />
+                                <field name="pc_deposed" />
+                                <field name="pc_sended" />
+                            </group>
+                            <group>
+                                <field name="pc_line_ids">
+                                    <list editable="bottom">
+                                        <field name="ref"/>
+                                        <field name="du_"/>
+                                    </list>
+                                </field>
+                            </group>
+
                         </page>
+
                         <page name="demande_client" string="Demande de client">
                             <p class="o_view_nocotent_smiling_face">
                                 donnée pas encore disponible
@@ -107,12 +123,12 @@
                         </page>
                         <page name="facture" string="Factures">
                             <p class="o_view_nocotent_smiling_face">
-                                donnée pas encore  disponible
+                                donnée pas encore disponible
                             </p>
                         </page>
                         <page name="lettre" string="Lettre/Email">
                             <p class="o_view_nocotent_smiling_face">
-                                donnée pas encore  disponible
+                                donnée pas encore disponible
                             </p>
                         </page>
                     </notebook>

@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_somasic_dossier_manager,somasic_dossier_manager,model_somasic_dossier,,1,1,1,1
+somasic_dossier.access_somasic_pc_line,access_somasic_pc_line,somasic_dossier.model_somasic_pc_line,,1,1,1,1
